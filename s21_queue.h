@@ -1,6 +1,8 @@
 #ifndef __S21_QUEUE__
 #define __S21_QUEUE__
 
+#include <list>
+
 class queue {
   private:
 

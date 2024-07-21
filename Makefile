@@ -1,4 +1,4 @@
-file_test=list.cpp
+file_test=queue.cpp
 
 all:
 	gcc -std=c++17 -Wall -Werror -Wextra -pedantic -g $(file_test) -lstdc++ -lm
