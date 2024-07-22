@@ -98,8 +98,39 @@ int main() {
 //   std::cout << std::endl;
 //   std::cout << sizeof(IT) << "   " << sizeof(size_t) << std::endl;
 //   A.sort();
-queue<int> A;
+  queue<int> A;
+  std::cout << A.size() << std::endl;
   A.push(111);
+  std::cout << A.size() << std::endl;
+  A.push(22);
+  A.push(788);
+  A.push(555);
+  A.push(333);
+  std::cout << A.size() << std::endl;
+
+  queue<int> B{5,6,7,8};
+  std::cout << B.size() << std::endl;
+  A.swap(B);
+  std::cout << "A.size = " << A.size() << std::endl;
+  std::cout << "B.size = " << B.size() << std::endl;
+  A.pop();
+  A.pop();
+  A.pop();
+  std::cout << "A.size = " << A.size() << std::endl;
+  A.pop();
+  std::cout << "A.size = " << A.size() << std::endl;
+
+  std::cout << "B.front = " << B.front() << std:: endl;
+  std::cout << "B.back = " << B.back() << std::endl;
+  B.pop();
+  B.push(191);
+  std::cout << "B.front = " << B.front() << std:: endl;
+  std::cout << "B.back = " << B.back() << std::endl;
+  B.pop();
+  std::cout << "B.front = " << B.front() << std:: endl;
+  std::cout << "B.size = " << B.size() << std::endl;
+  std::cout << "A.empty() = " << A.empty() << "   true = " << true << std::endl;
+  std::cout << "B.empty() = " << B.empty() << "   false = " << false << std::endl;
 
 
   return 0;
