@@ -328,12 +328,29 @@ TEST(Queue, Operator_Copy) {
     std_queue_int.push(3);
     s21::queue<int> our_queue_empty;
     std::queue<int> std_queue_empty;
-    our_queue_empty queue(our_queue_int);
+    our_queue_empty = our_queue_int;
     std_queue_empty = std_queue_int;
     EXPECT_EQ(our_queue_empty.front(), std_queue_empty.front());
     EXPECT_EQ(our_queue_empty.back(), std_queue_empty.back());
     EXPECT_EQ(our_queue_int.empty(), std_queue_int.empty());
 }
+
+// TEST(Queue, Operator_Copy) {
+//     s21::queue<int> our_queue_int = {1, 2, 3};
+//     std::queue<int> std_queue_int;
+//     std_queue_int.push(1);
+//     std_queue_int.push(2);
+//     std_queue_int.push(3);
+//     s21::queue<int> our_queue_empty{5, 7, 8};
+//     std::queue<int> std_queue_empty;
+//     // our_queue_empty = our_queue_int;
+//     std_queue_empty = std_queue_int;
+//     EXPECT_EQ(our_queue_empty.front(), 5);
+//     std::cout << "our_queue_empty.back() = " << our_queue_empty.back() << std::endl;
+//     std::cout << "our_queue_int.empty() = " << our_queue_int.empty() << std::endl;
+//     EXPECT_EQ(our_queue_empty.back(), 8);
+//     EXPECT_EQ(our_queue_int.empty(), 0);
+// }
 
 int main() {
   ::testing::InitGoogleTest();
