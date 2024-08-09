@@ -36,3 +36,7 @@ equivalent:
 tree:
 	gcc -std=c++17 -Wall -Werror -Wextra -pedantic -g tree.cpp -lstdc++ -lm
 	./a.out
+
+test_map: clean
+	gcc -std=c++17 -Wall -Werror -Wextra -pedantic -g test_map.cpp -lgtest -lstdc++ -lm
+	./a.out
