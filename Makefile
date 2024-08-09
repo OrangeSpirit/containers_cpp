@@ -32,3 +32,7 @@ copy_construct:
 equivalent:
 	gcc -std=c++17 -Wall -Werror -Wextra -pedantic -g equivalent.cpp -lstdc++ -lm
 	./a.out
+
+tree:
+	gcc -std=c++17 -Wall -Werror -Wextra -pedantic -g tree.cpp -lstdc++ -lm
+	./a.out
