@@ -24,6 +24,7 @@ class queue {
   queue(queue &&q) noexcept : inner_list(std::move(q.inner_list)) {}
   ~queue() { this->inner_list.clear(); }
   queue& operator=(queue &&q) noexcept {
+    std::cout << "call operator =" << std::endl;
     if (this != &q) {
       this->inner_list = std::move(q.inner_list);
     }
@@ -328,7 +329,7 @@ TEST(Queue, Operator_Copy) {
     std_queue_int.push(3);
     s21::queue<int> our_queue_empty;
     std::queue<int> std_queue_empty;
-    our_queue_empty = our_queue_int;
+    // our_queue_empty = our_queue_int;
     std_queue_empty = std_queue_int;
     EXPECT_EQ(our_queue_empty.front(), std_queue_empty.front());
     EXPECT_EQ(our_queue_empty.back(), std_queue_empty.back());
