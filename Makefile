@@ -40,3 +40,7 @@ tree:
 test_map: clean
 	gcc -std=c++17 -Wall -Werror -Wextra -pedantic -g test_map.cpp -lgtest -lstdc++ -lm
 	./a.out
+
+test_class: clean
+	gcc -std=c++17 -Wall -Werror -Wextra -pedantic -g test_class.cpp -lgtest -lstdc++ -lm
+	./a.out
